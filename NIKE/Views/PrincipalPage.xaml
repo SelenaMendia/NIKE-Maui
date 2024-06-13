@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NIKE.Views.PrincipalPage"
+             NavigationPage.HasNavigationBar="False"
+             Title="PrincipalPage">
+
+    <Grid>
+        
+        <Image Source="inicio.png" Aspect="AspectFill" />
+
+        <!-- Contenido de la página -->
+        <Grid RowDefinitions="Auto,*,Auto">
+            <!-- Botones en la parte superior -->
+            <HorizontalStackLayout Grid.Row="0" HorizontalOptions="Center" Spacing="205" Margin="0,20">
+
+                <Button 
+                    Text="Salir" 
+                    TextColor="Black" 
+                    BackgroundColor="WhiteSmoke" 
+                    Clicked="btnLoginVolver_Clicked" 
+                    WidthRequest="80"
+                    HeightRequest="50"/>
+                <Button 
+                    Text="Acerca" 
+                    TextColor="Black" 
+                    BackgroundColor="WhiteSmoke" 
+                    Clicked="btnAcerca_Clicked" 
+                    WidthRequest="80"
+                    HeightRequest="50"/>
+            </HorizontalStackLayout>
+
+            <!-- Contenido principal -->
+            <VerticalStackLayout Grid.Row="1" Margin="0,200">
+                
+                <Label Text="Inspirando el potencial" TextColor="White" HorizontalOptions="Center" FontSize="25" Margin="0,20" FontAttributes="Bold" TextTransform="Uppercase"/>
+                <Label Text="atlético y el estilo" TextColor="White" HorizontalOptions="Center" FontSize="25" Margin="0,-5" FontAttributes="Bold" TextTransform="Uppercase"/>
+                <Label Text="desde 1964" TextColor="White" HorizontalOptions="Center" FontSize="25" Margin="0,15" FontAttributes="Bold" TextTransform="Uppercase"/>
+            </VerticalStackLayout>
+
+
+        </Grid>
+    </Grid>
+</ContentPage>

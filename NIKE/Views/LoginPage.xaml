@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NIKE.Views.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             Title="LoginPage">
+    <Grid>
+        <!-- Imagen de fondo -->
+        <Image Source="login.png" Aspect="AspectFill" />
+
+        <!-- Contenido de la página -->
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+            <VerticalStackLayout Grid.Row="2" Margin="0,340">
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="5">
+                    <Image>
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="FontAwesomeSolid"
+                                Glyph="&#xf007;" 
+                                Color="White"
+                                Size="20"/>
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Ingrese su Usuario" TextColor="White" VerticalOptions="Center" />
+                </StackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+
+                    <Entry   
+                        Keyboard="Email"
+                        TextColor="White" 
+                        x:Name="entLoginEmail"
+                        Placeholder="             ites      "  
+                        HorizontalOptions="Center"
+                        BackgroundColor="{StaticResource Gray900}"
+                        WidthRequest="140"
+                        HeightRequest="50"
+                    />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="2" Margin="0,440">
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="5">
+                    <Image>
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="FontAwesomeSolid"
+                                Glyph="&#xf023;" 
+                                Color="White"
+                                Size="20"/>
+                        </Image.Source>
+                    </Image>
+                    <Label Text="Ingrese su Contrasena" TextColor="White" VerticalOptions="Center" />
+                </StackLayout>
+
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+
+                    <Entry   
+                        Keyboard="Default"
+                        TextColor="White" 
+                        x:Name="entLoginPassword"
+                        Placeholder="           123456      "  
+                        HorizontalOptions="Center"
+                        BackgroundColor="{StaticResource Gray900}"
+                        WidthRequest="140"
+                        HeightRequest="50"
+                        IsPassword="True"/>
+                </HorizontalStackLayout>
+
+                <ActivityIndicator Margin="0,5"/>
+                <Button 
+                    TextColor="Black"
+                    BackgroundColor="WhiteSmoke"
+                    Text="Iniciar Sesion" 
+                    x:Name="btnLoginIngresar" 
+                    Clicked="btnLoginIngresar_Clicked" 
+                    Margin="0,15"
+                    WidthRequest="250"
+                    HeightRequest="50"
+                />
+                <ActivityIndicator />
+                <Label Text="ITES - 2024" TextColor="White" HorizontalOptions="Center" FontSize="Micro" />
+
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

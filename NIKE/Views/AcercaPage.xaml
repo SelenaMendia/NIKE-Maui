@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NIKE.Views.AcercaPage"
+             NavigationPage.HasNavigationBar="False"
+             Title="AcercaPage" >
+
+    <Grid>
+
+        <Image Source="acerca.png" Aspect="AspectFill" />
+
+        <!-- Contenido de la página -->
+        <Grid RowDefinitions="Auto,*,Auto">
+            <!-- Botones en la parte superior -->
+            <HorizontalStackLayout Grid.Row="0" HorizontalOptions="Start"  Margin="20,20">
+                <Button 
+                    Text="Volver" 
+                    TextColor="Black" 
+                    BackgroundColor="WhiteSmoke" 
+                    Clicked="btnPrincipalVolver_Clicked" 
+                    WidthRequest="80"
+                    HeightRequest="50"/>
+
+            </HorizontalStackLayout>
+        </Grid>
+        <StackLayout>
+
+                <Image Source="yo_acerca.png" Margin="0,200" />
+                <!-- Button para marcar un número -->
+                <Button Text="Marcar" TextColor="White" BackgroundColor="Green" Clicked="MarcarNumero" Margin="130,-130">
+                    <Button.ImageSource>
+                    <FontImageSource Glyph="&#xf879;" FontFamily="FontAwesomeSolid" Color="White" Size="20"/>
+                    </Button.ImageSource>
+                </Button>
+
+                <!-- Button para enviar un correo electrónico -->
+            <Button  Text="Correo" TextColor="White" BackgroundColor="Red" Clicked="EnviarCorreoConGmail" Margin="130,180">
+                    <Button.ImageSource>
+                    <FontImageSource Glyph="&#xf0e0;" FontFamily="FontAwesomeSolid" Color="White" Size="20"/>
+                    </Button.ImageSource>
+                </Button>
+            </StackLayout>
+
+
+        </Grid>
+   
+</ContentPage>
